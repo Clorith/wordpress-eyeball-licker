@@ -48,9 +48,9 @@ function eye_post_suffix( $content ) {
         <form action="" method="post">
             <input type="hidden" name="eyeball_post" value="' . $post->ID . '" />
             <button type="submit" class="eyeball_lick_button" style="background: transparent; border: none;">
-                <img src="' . plugins_url( 'eyeball.png', __FILE__ ) . '" style="height: 25px;" alt="Lick an eyeball" />
+                <img src="' . plugins_url( 'eyeball.png', __FILE__ ) . '" style="height: 25px;" alt="' . __( 'Lick an eyeball', 'eyeball_licker' ) . '" />
                 <span>
-                    Show your appreciation, lick an eyeball!' . ( ! empty( $licks ) ? ' (You will be sharing germs with ' . $licks . ' others)' : '' ) . '
+                    ' . __( 'Show your appreciation, lick an eyeball!', 'eyeball_licker' ) . ( ! empty( $licks ) ? '( ' . printf( _n( 'You will be sharing germs with %d other', 'You will be sharing germs with %d others', $licks, 'eyeball_licker' ), $licks ) . ' )' : '' ) . '
                 </span>
             </button>
         </form>
