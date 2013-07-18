@@ -50,7 +50,7 @@ function eye_post_suffix( $content ) {
             <button type="submit" class="eyeball_lick_button" style="background: transparent; border: none;">
                 <img src="' . plugins_url( 'eyeball.png', __FILE__ ) . '" style="height: 25px;" alt="' . __( 'Lick an eyeball', 'eyeball_licker' ) . '" />
                 <span>
-                    ' . __( 'Show your appreciation, lick an eyeball!', 'eyeball_licker' ) . ( ! empty( $licks ) ? '( ' . printf( _n( 'You will be sharing germs with %d other', 'You will be sharing germs with %d others', $licks, 'eyeball_licker' ), $licks ) . ' )' : '' ) . '
+                    ' . __( 'Show your appreciation, lick an eyeball!', 'eyeball_licker' ) . ( ! empty( $licks ) ? ' (' . sprintf( _n( 'You will be sharing germs with %1$d other', 'You will be sharing germs with %1$d others', $licks, 'eyeball_licker' ), $licks ) . ')' : '' ) . '
                 </span>
             </button>
         </form>
